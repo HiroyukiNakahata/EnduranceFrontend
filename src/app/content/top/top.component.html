@@ -1,20 +1,13 @@
-<p>top works!</p>
 <div>
-  <div>
+  <form>
     <label>
       ユーザーID
-      <input type="email" [(ngModel)]="userId">
+      <input type="email" name="mail" [(ngModel)]="userId">
     </label>
-  </div>
-  <div>
     <label>
       パスワード
-      <input type="password" [(ngModel)]="password">
+      <input type="password" name="password" autocomplete="on" [(ngModel)]="password">
     </label>
-  </div>
-  <div>
     <button (click)="login()">ログイン</button>
-  </div>
+  </form>
 </div>
-
-<button (click)="loadSummary()">ゲット</button>

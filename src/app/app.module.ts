@@ -7,11 +7,21 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {TopComponent} from './content/top/top.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {DashboardComponent} from './content/dashboard/dashboard.component';
+import {ProjectComponent} from './content/childcontent/project/project.component';
+import {SummaryComponent} from './content/childcontent/summary/summary.component';
+import {TodoComponent} from './content/childcontent/todo/todo.component';
+import {NavigationComponent} from './content/childcontent/navigation/navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TopComponent
+    TopComponent,
+    DashboardComponent,
+    ProjectComponent,
+    SummaryComponent,
+    TodoComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

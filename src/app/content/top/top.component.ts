@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {UserService} from '../../service/user.service';
 import {TokenService} from '../../service/token.service';
-import {MinutesService} from '../../service/minutes.service';
 import {AuthenticationException, NetworkException} from '../../model/error';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-top',
@@ -15,7 +15,7 @@ export class TopComponent implements OnInit {
 
   constructor(private userService: UserService,
               private tokenService: TokenService,
-              private minutesService: MinutesService) {
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -26,6 +26,8 @@ export class TopComponent implements OnInit {
       .then(d => {
         console.log(d);
         this.tokenService.setToken(d.token);
+        this.tokenService.setUserId(d.id);
+        this.router.navigate(['dashboard']);
       })
       .catch(e => {
         if (e instanceof AuthenticationException) {
@@ -34,10 +36,5 @@ export class TopComponent implements OnInit {
           window.alert('ネットワークエラー');
         }
       });
-  }
-
-  loadSummary() {
-    this.minutesService.AjaxGetMinutesSummary(this.tokenService.getToken())
-      .then(d => console.log(d));
   }
 }
