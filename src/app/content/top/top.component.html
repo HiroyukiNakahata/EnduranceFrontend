@@ -1,0 +1,20 @@
+<p>top works!</p>
+<div>
+  <div>
+    <label>
+      ユーザーID
+      <input type="email" [(ngModel)]="userId">
+    </label>
+  </div>
+  <div>
+    <label>
+      パスワード
+      <input type="password" [(ngModel)]="password">
+    </label>
+  </div>
+  <div>
+    <button (click)="login()">ログイン</button>
+  </div>
+</div>
+
+<button (click)="loadSummary()">ゲット</button>

@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "EnduranceFrontend": {
@@ -66,7 +66,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "EnduranceFrontend:build"
+            "browserTarget": "EnduranceFrontend:build",
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "EnduranceFrontend"
+    }
+  },
+  "defaultProject": "EnduranceFrontend",
+  "cli": {
+    "analytics": "6e606a0b-27ae-4d63-be8f-098812eeaf07"
+  }
 }
