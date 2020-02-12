@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {MinutesService} from '../../../service/minutes.service';
+import {MinutesService} from '../../../../service/minutes.service';
 import {Subject, Subscription} from 'rxjs';
-import {MinutesSummary} from '../../../model/minutes';
+import {MinutesSummary} from '../../../../model/minutes';
 
 @Component({
   selector: 'app-summary',

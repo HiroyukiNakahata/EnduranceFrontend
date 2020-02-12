@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subject, Subscription} from 'rxjs';
-import {Todo} from '../../../model/todo';
-import {TodoService} from '../../../service/todo.service';
+import {Todo} from '../../../../model/todo';
+import {TodoService} from '../../../../service/todo.service';
 
 @Component({
   selector: 'app-todo',

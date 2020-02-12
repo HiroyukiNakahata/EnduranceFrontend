@@ -1,7 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {ProjectService} from '../../../service/project.service';
 import {Subject, Subscription} from 'rxjs';
-import {Project} from '../../../model/project';
+import {Router} from '@angular/router';
+import {ProjectService} from '../../../../service/project.service';
+import {Project} from '../../../../model/project';
 
 @Component({
   selector: 'app-project',
@@ -13,7 +14,8 @@ export class ProjectComponent implements OnInit, OnDestroy {
   projectSubject: Subject<Project[]>;
   subscription: Subscription;
 
-  constructor(private projectService: ProjectService) {
+  constructor(private projectService: ProjectService,
+              private router: Router) {
   }
 
   ngOnInit(): void {
@@ -28,5 +30,9 @@ export class ProjectComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
+  }
+
+  moveEditor() {
+    this.router.navigate(['editor']);
   }
 }

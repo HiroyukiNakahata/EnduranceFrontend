@@ -6,5 +6,8 @@
   <div class="pj_title" *ngFor="let project of projects">
     {{project.project_name}}
     {{project.client}}
+    <div>
+      <button (click)="moveEditor()">議事録作成</button>
+    </div>
   </div>
 </div>

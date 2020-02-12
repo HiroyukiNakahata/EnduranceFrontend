@@ -8,10 +8,11 @@ import {AppComponent} from './app.component';
 import {TopComponent} from './content/top/top.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {DashboardComponent} from './content/dashboard/dashboard.component';
-import {ProjectComponent} from './content/childcontent/project/project.component';
-import {SummaryComponent} from './content/childcontent/summary/summary.component';
-import {TodoComponent} from './content/childcontent/todo/todo.component';
-import {NavigationComponent} from './content/childcontent/navigation/navigation.component';
+import {ProjectComponent} from './content/dashboard/childcontent/project/project.component';
+import {SummaryComponent} from './content/dashboard/childcontent/summary/summary.component';
+import {TodoComponent} from './content/dashboard/childcontent/todo/todo.component';
+import {NavigationComponent} from './content/common/navigation/navigation.component';
+import {EditorComponent} from './content/editor/editor.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {NavigationComponent} from './content/childcontent/navigation/navigation.
     ProjectComponent,
     SummaryComponent,
     TodoComponent,
-    NavigationComponent
+    NavigationComponent,
+    EditorComponent
   ],
   imports: [
     BrowserModule,
